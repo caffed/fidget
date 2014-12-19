@@ -1,4 +1,4 @@
-ngular.module('factories.pool', [])
+angular.module('factories.pool', [])
 
 .factory("Pool", function($cacheFactory){
   var _pool, _obj, _keys = [];
@@ -24,7 +24,7 @@ ngular.module('factories.pool', [])
 
   var _deleteKey = function _deleteKey (key) {
     for (var i=0; i<_keys.length; i++){
-      if (_keys[i] === key) { 
+      if (_keys[i] === key) {
         _keys.splice(i);
       }
     }
