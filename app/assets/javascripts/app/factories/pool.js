@@ -8,7 +8,7 @@ angular.module('factories.pool', [])
   };
 
   var _randomInt = function _randomInt () {
-    return Math.random() * Math.pow(10, 21);
+    return Math.floor(Math.random() * Math.pow(10, 16));
   };
 
   var _createKey = function _createKey (objName, delta) {
@@ -23,10 +23,9 @@ angular.module('factories.pool', [])
   };
 
   var _deleteKey = function _deleteKey (key) {
-    for (var i=0; i<_keys.length; i++){
-      if (_keys[i] === key) {
-        _keys.splice(i);
-      }
+    var _index = _keys.indexOf(key);
+    if (_index >= 0){
+      _keys.splice(_index);
     }
   };
 
