@@ -8,7 +8,7 @@ angular.module('factories.pool', [])
   };
 
   var _randomInt = function _randomInt () {
-    return Math.random() * Math.pow(10, 16);
+    return Math.random() * Math.pow(10, 21);
   };
 
   var _createKey = function _createKey (objName, delta) {
